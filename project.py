@@ -35,9 +35,25 @@ def wordToAscii(s):
 	values = []
 	for word in s:
 		values.append(ord(word))
-	print(values)
+	return values
 
-def AsciiToWord()
+def AsciiToWord(s):
+	values = []
+	for asci in s:
+		values.append(chr(asci))
+	return ''.join(values)
+
+def AsciiToBinary(s):
+	values = []
+	for asci in s:
+		values.append(bin(asci))
+	return values
+
+def wordToBinary(s):
+	values = []
+	for asci in s:
+		values.append(bin(ord(asci)).replace("0b",""))
+	return values
 		
 while True:
 	#x = toNumber(input("Binary: "))
@@ -46,6 +62,8 @@ while True:
 	#print(int(''.join(num)))
 	#num = []
 
-	wordToAscii(input("Word: "))
+	#x = wordToAscii(input("Word: "))
+	#print(AsciiToWord(x))
+	print(wordToBinary(input("Word: ")))
 
 
