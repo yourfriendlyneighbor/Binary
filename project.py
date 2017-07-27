@@ -29,7 +29,7 @@ def convertToBinary(n):
 	if n > 1:
 		convertToBinary(n//2)
 	num.append(str(n % 2))
-	
+
 def wordToAscii(s):
 	values = []
 	for word in s:
@@ -61,43 +61,34 @@ def xorGate(m, k):
 		else:
 			string += "0"
 		index = (index+1)%len(k)
+	if(toNumber)
+	print(toNumber(string))
 	return string
 
+# ' " \k ...
 
 from random import randint
-	
+
 def Xorcipher(mes, key):
-	words = []
 
-	print(mes)
-	for letter in mes:
-		words.append(xorGate(letter, key))
+	value = []
+	engli = []
+	for c in mes:
+		value.append(xorGate(wordToBinary(c)[0], key))
 
-	return ''.join(words)
+	for val in value:
+		engli.append(AsciiToWord(toNumber(val)))
+
+
+
+
+	print(engli)
+	return ''.join(engli)
+
 
 key = ""
-for c in range(7):	
+for c in range(7):
 	key += str(randint(0,1))
 
 print(Xorcipher(input("Encrypt string here: "), key))
 print(Xorcipher(input("Decrypt string here: "), key))
-		
-#while True:
-	#x = toNumber(input("Binary: "))
-
-	#x = convertToBinary(int(input("Number: ")))
-	#print(int(''.join(num)))
-	#num = []
-
-	#x = wordToAscii(input("Word: "))
-	#print(AsciiToWord(x))
-	#print(wordToBinary(input("Word: ")))
-
-	#xor_gate("Hello World")
-
-	#y = input("'encrypt' or 'decrypt'").lower()
-	#if(y == 'encrypt'):
-	#	bitSwitch(input("Enter string: "))
-	#elif(y == 'decrypt'):
-
-
